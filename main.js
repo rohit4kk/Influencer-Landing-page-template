@@ -6,8 +6,25 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // 1. SCROLL REVEAL CONTROLLER (IntersectionObserver)
   const revealElements = document.querySelectorAll(
-    '.reveal-fade, .reveal-text-container, .reveal-stagger-container, .reveal-image-container'
+    '.reveal-fade, .reveal-text-container, .reveal-stagger-container, .reveal-image-container, .bento-card'
   );
+
+  // Handle image load fade-in to prevent layout popping/snapping
+  const revealImages = document.querySelectorAll('.reveal-image-container');
+  revealImages.forEach(container => {
+    const img = container.querySelector('img');
+    if (img) {
+      if (img.complete) {
+        container.classList.add('loaded');
+      } else {
+        img.addEventListener('load', () => {
+          container.classList.add('loaded');
+        });
+      }
+    } else {
+      container.classList.add('loaded');
+    }
+  });
 
   // Initialize SVG path lengths for clean hand-drawn path animations
   const doodlePaths = document.querySelectorAll('.doodle-path');
@@ -17,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     path.style.strokeDashoffset = length;
   });
 
-  const revealObserver = new IntersectionObserver((entries, observer) => {
+  const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('in-view');
@@ -30,9 +47,16 @@ document.addEventListener('DOMContentLoaded', () => {
             card.classList.add('in-view');
           });
         }
+      } else {
+        // Smoothly fade out when elements leave viewport
+        entry.target.classList.remove('in-view');
         
-        // Stop observing once animation has executed
-        observer.unobserve(entry.target);
+        if (entry.target.classList.contains('reveal-stagger-container')) {
+          const cards = entry.target.querySelectorAll('.reveal-card-item');
+          cards.forEach(card => {
+            card.classList.remove('in-view');
+          });
+        }
       }
     });
   }, {
@@ -114,9 +138,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // 4. METRICS FILTERING
+  // 4. BENTO GRID FILTERING (Premium Dimming Interaction)
   const filterTabs = document.querySelectorAll('.filter-tab');
-  const metricCards = document.querySelectorAll('.metric-card');
+  const bentoCards = document.querySelectorAll('.bento-card');
 
   filterTabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -129,22 +153,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const platform = tab.getAttribute('data-platform');
 
-      metricCards.forEach(card => {
-        const cardPlatforms = card.getAttribute('data-platforms').split(',');
+      bentoCards.forEach(card => {
+        const cardPlatformsAttr = card.getAttribute('data-platforms');
+        if (!cardPlatformsAttr) return;
+        const cardPlatforms = cardPlatformsAttr.split(',');
         
-        if (cardPlatforms.includes(platform)) {
-          card.style.display = 'flex';
-          void card.offsetWidth; // Force layout recalculation for transition
-          card.style.opacity = '1';
-          card.style.transform = 'scale(1)';
+        if (platform === 'all' || cardPlatforms.includes(platform)) {
+          card.classList.remove('dimmed');
         } else {
-          card.style.opacity = '0';
-          card.style.transform = 'scale(0.96) translateY(10px)';
-          setTimeout(() => {
-            if (!cardPlatforms.includes(tab.getAttribute('data-platform'))) {
-              card.style.display = 'none';
-            }
-          }, 350);
+          card.classList.add('dimmed');
         }
       });
     });
@@ -257,53 +274,43 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // 6. TESTIMONIALS SLIDER (Smooth Slide-Fade transitions)
-  const slides = document.querySelectorAll('.testimonial-slide');
-  const dots = document.querySelectorAll('.carousel-dot');
-  const btnPrev = document.querySelector('.btn-prev');
-  const btnNext = document.querySelector('.btn-next');
-  let currentSlide = 0;
+  // 6. STICKY STORYTELLER SCROLL TRIGGER
+  const timelineSteps = document.querySelectorAll('.timeline-step');
+  const journeyImages = document.querySelectorAll('.journey-image-container');
 
-  function showSlide(index) {
-    if (index >= slides.length) currentSlide = 0;
-    else if (index < 0) currentSlide = slides.length - 1;
-    else currentSlide = index;
+  if (timelineSteps.length > 0 && journeyImages.length > 0) {
+    const journeyObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const stepNum = entry.target.getAttribute('data-step');
+          
+          // Set active states on timeline description blocks
+          timelineSteps.forEach(step => {
+            if (step.getAttribute('data-step') === stepNum) {
+              step.classList.add('active');
+            } else {
+              step.classList.remove('active');
+            }
+          });
 
-    slides.forEach((slide) => {
-      slide.classList.remove('active');
+          // Set active states on sticky images
+          journeyImages.forEach(img => {
+            if (img.id === `journey-img-${stepNum}`) {
+              img.classList.add('active');
+            } else {
+              img.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '-30% 0px -40% 0px', // Triggers when the timeline text moves past screen center
+      threshold: 0.1
     });
-    dots.forEach(dot => dot.classList.remove('active'));
 
-    // Trigger reflow for slide fade-in translation
-    void slides[currentSlide].offsetWidth;
-    slides[currentSlide].classList.add('active');
-    dots[currentSlide].classList.add('active');
+    timelineSteps.forEach(step => journeyObserver.observe(step));
   }
-
-  btnPrev.addEventListener('click', () => showSlide(currentSlide - 1));
-  btnNext.addEventListener('click', () => showSlide(currentSlide + 1));
-
-  dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-      const slideIndex = parseInt(dot.getAttribute('data-slide'));
-      showSlide(slideIndex);
-    });
-  });
-
-  let slideInterval = setInterval(() => {
-    showSlide(currentSlide + 1);
-  }, 8000);
-
-  const resetInterval = () => {
-    clearInterval(slideInterval);
-    slideInterval = setInterval(() => {
-      showSlide(currentSlide + 1);
-    }, 8000);
-  };
-
-  btnPrev.addEventListener('click', resetInterval);
-  btnNext.addEventListener('click', resetInterval);
-  dots.forEach(dot => dot.addEventListener('click', resetInterval));
 
 
   // 7. PARTNERSHIP FORM SUBMISSION

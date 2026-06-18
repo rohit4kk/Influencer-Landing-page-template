@@ -30,10 +30,11 @@
       </a>
 
       <nav class="nav-menu" aria-label="Main Navigation">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#metrics" class="nav-link">Metrics</a>
-        <a href="#case-studies" class="nav-link">Case Studies</a>
-        <a href="#calculator" class="nav-link">Packages</a>
+        <a href="#journey" class="nav-link">Journey</a>
+        <a href="#dashboard" class="nav-link">Dashboard</a>
+        <a href="#showcase" class="nav-link">Showcase</a>
+        <a href="#packages" class="nav-link">Packages</a>
+        <a href="#gallery" class="nav-link">Archive</a>
         <a href="#testimonials" class="nav-link">Kind Words</a>
       </nav>
 
@@ -43,33 +44,10 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section" id="about">
-    <!-- Floating Background Shapes for Parallax -->
-    <div class="parallax-layer parallax-blob-1" data-speed="-0.15"></div>
-    <div class="parallax-layer parallax-blob-2" data-speed="0.25"></div>
-
-    <div class="parallax-layer parallax-star-1" data-speed="0.12">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 0L14.8 9.2L24 12L14.8 14.8L12 24L9.2 14.8L0 12L9.2 9.2L12 0Z" fill="var(--color-terracotta)"
-          opacity="0.35" />
-      </svg>
-    </div>
-    <div class="parallax-layer parallax-cross-1" data-speed="-0.08">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2 2L18 18M18 2L2 18" stroke="var(--color-mustard)" stroke-width="3" stroke-linecap="round"
-          opacity="0.45" />
-      </svg>
-    </div>
-    <div class="parallax-layer parallax-circle-1" data-speed="0.05">
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="16" cy="16" r="14" stroke="var(--color-sky-blue)" stroke-width="2" stroke-dasharray="4 4"
-          opacity="0.5" />
-      </svg>
-    </div>
-
-    <div class="container hero-container">
-      <div class="hero-content">
+  <!-- Hero Section (Magazine Layout) -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-container-magazine">
+      <div class="hero-header-text">
         <div class="hero-badge reveal-fade">
           <span>Available for Q3/Q4 Partnerships</span>
           <svg class="badge-doodle" width="120" height="12" viewBox="0 0 120 12" fill="none"
@@ -78,216 +56,458 @@
               class="doodle-path" />
           </svg>
         </div>
-
-        <!-- Luxury Editorial Title Split-Word/Line Reveal -->
-        <h1 class="hero-title reveal-text-container">
-          <span class="reveal-text-line"><span>Let's create something</span></span>
-          <span class="reveal-text-line">
-            <span>
-              <span class="highlight-word">
-                extraordinary
-                <svg class="circle-doodle" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5 25C15 5 185 2 195 22C205 42 165 55 95 57C25 59 -5 45 3 30" stroke="var(--color-sky-blue)"
-                    stroke-width="3" stroke-linecap="round" class="doodle-path" />
-                </svg>
-              </span>
-              together.
-            </span>
-          </span>
+        <h1 class="hero-large-title reveal-text-container">
+          <span>Let's build a</span><br>
+          <span class="serif-italic">creative legacy</span><br>
+          <span>together.</span>
         </h1>
-
-        <p class="hero-description reveal-fade">
-          I'm Aria. I'm a doctor-turned-lifestyle creator, podcast host, and the author of the bestselling journal
-          <em>Find Your Focus</em>. I help over 350,000+ modern professionals design intentional, productive, and
-          beautiful lives.
-        </p>
-
-        <div class="hero-actions reveal-fade">
-          <a href="#calculator" class="btn btn-secondary btn-pill btn-magnetic">View Packages</a>
-          <a href="#contact" class="btn btn-text btn-magnetic">
-            Get in Touch
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </a>
-        </div>
-
-        <!-- Curved Arrow Doodle pointing downward-right -->
-        <div class="hero-arrow-doodle reveal-fade">
-          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10 10C25 25 35 55 60 55" stroke="var(--color-mustard)" stroke-width="3" stroke-linecap="round"
-              stroke-dasharray="4 4" class="doodle-path" />
-            <path d="M50 45L60 55L50 65" stroke="var(--color-mustard)" stroke-width="3" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-        </div>
       </div>
-
-      <!-- Creator portrait with scroll parallax capability -->
-      <div class="hero-image-area" data-speed="-0.06">
-        <div class="image-bubble-frame reveal-image-container">
-          <div class="bubble-backing"></div>
-          <img src="./assets/creator-portrait.png" alt="Aria Vance Portrait" class="creator-portrait">
+      
+      <div class="hero-magazine-grid">
+        <!-- Main big portrait with organic overlapping tags -->
+        <div class="hero-grid-image-main reveal-image-container">
+          <img src="./assets/creator-portrait.png" alt="Aria Vance Portrait">
+          <div class="image-label-float">Aria Vance &mdash; Creator & Director</div>
         </div>
-
-        <!-- Speech Bubble Greeting Doodle -->
-        <div class="greeting-bubble reveal-fade">
-          <p>Hey there! 👋</p>
-          <svg class="bubble-tail" width="16" height="16" viewBox="0 0 16 16" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 0C6 4 12 12 16 16C12 16 4 12 0 0Z" fill="var(--color-cream-card)" />
-          </svg>
+        
+        <!-- Overlapping content card with biography / stats -->
+        <div class="hero-grid-intro-card reveal-fade">
+          <p class="intro-large-text">
+            I'm Aria Vance. I transitioned from clinical medicine to build a multi-channel creative practice. Today, I help over 350,000+ modern professionals design intentional, beautiful, and productive lives.
+          </p>
+          <div class="hero-actions">
+            <a href="#packages" class="btn btn-primary btn-pill">Explore Tiers</a>
+            <a href="#contact" class="btn btn-text">Get in Touch &rarr;</a>
+          </div>
+        </div>
+        
+        <!-- Tiny floating detail visual card (magazine page detail) -->
+        <div class="hero-grid-sub-visual reveal-image-container">
+          <div class="visual-decor-card">
+            <span class="decor-tag">Latest publication</span>
+            <h4>Find Your Focus Journal</h4>
+            <p>Over 80,000 copies sold worldwide.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Partners Logo Bar (Dark Contrast) -->
-  <section class="partners-section reveal-fade">
+  <!-- Logo Wall (Marquee horizontal ticker) -->
+  <section class="logo-wall-section reveal-fade">
+    <div class="logo-wall-title">Selected Brand Collaborators</div>
+    <div class="logo-ticker-container">
+      <div class="logo-ticker-track">
+        <!-- Group 1 -->
+        <div class="ticker-item">Notion</div>
+        <div class="ticker-item">Skillshare</div>
+        <div class="ticker-item">Audible</div>
+        <div class="ticker-item">Squarespace</div>
+        <div class="ticker-item">Framer</div>
+        <div class="ticker-item">Linear</div>
+        <div class="ticker-item">Stripe</div>
+        <!-- Group 2 (Duplicate for infinite marquee) -->
+        <div class="ticker-item">Notion</div>
+        <div class="ticker-item">Skillshare</div>
+        <div class="ticker-item">Audible</div>
+        <div class="ticker-item">Squarespace</div>
+        <div class="ticker-item">Framer</div>
+        <div class="ticker-item">Linear</div>
+        <div class="ticker-item">Stripe</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy Section (Alternating Dark + Large Numbers) -->
+  <section class="philosophy-section" id="philosophy">
     <div class="container">
-      <h2 class="partners-title">Partnered with Leading Brands</h2>
-      <div class="partners-grid">
-        <div class="partner-logo" title="Notion">
-          <span class="logo-brand">Notion</span>
+      <div class="philosophy-grid">
+        <div class="philosophy-intro reveal-fade">
+          <span class="section-label">Core Philosophy</span>
+          <h2 class="section-title-serif">The Principles of Creative Resonance</h2>
+          <p class="philosophy-desc">We don't do standard sponsorships. We build narrative integrations that align brand utility with creator authenticity.</p>
         </div>
-        <div class="partner-logo" title="Skillshare">
-          <span class="logo-brand">Skillshare</span>
-        </div>
-        <div class="partner-logo" title="Audible">
-          <span class="logo-brand">Audible</span>
-        </div>
-        <div class="partner-logo" title="Squarespace">
-          <span class="logo-brand">Squarespace</span>
+        <div class="philosophy-items">
+          <!-- Item 01 -->
+          <div class="philosophy-item reveal-fade">
+            <div class="editorial-number">01</div>
+            <div class="philosophy-content">
+              <h3>Narrative First</h3>
+              <p>Every partnership starts with a story. We weave products naturally into daily workflows so they feel like resources, not interruptions.</p>
+            </div>
+          </div>
+          <!-- Item 02 -->
+          <div class="philosophy-item reveal-fade">
+            <div class="editorial-number">02</div>
+            <div class="philosophy-content">
+              <h3>Visual Rigor</h3>
+              <p>Our aesthetic standards match your design team's expectations. High-end lighting, custom typography, and editorial styling are default.</p>
+            </div>
+          </div>
+          <!-- Item 03 -->
+          <div class="philosophy-item reveal-fade">
+            <div class="editorial-number">03</div>
+            <div class="philosophy-content">
+              <h3>Compound Impact</h3>
+              <p>We syndicate integrations across YouTube, Newsletter, and Podcast channels to create a unified touchpoint strategy for maximum recall.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Metrics Grid Section -->
-  <section class="metrics-section" id="metrics">
+  <!-- Creative Dashboard (Bento Grid) -->
+  <section class="dashboard-section" id="dashboard">
     <div class="container">
       <div class="section-header reveal-fade">
-        <!-- Section title slide-reveal -->
-        <h2 class="section-title reveal-text-container">
-          <span class="reveal-text-line"><span>The Metrics That Matter</span></span>
-        </h2>
-        <p class="section-subtitle">A transparent look at reach, engagement, and audience demographics across my main
-          channels.</p>
-
-        <!-- Platform Filter Tabs -->
+        <span class="section-label">Performance Dashboard</span>
+        <h2 class="section-title">The Creative Ecosystem</h2>
+        <p class="section-subtitle">A transparent look at reach, engagement, and audience demographics across my main channels.</p>
+        
         <div class="filter-tabs" role="tablist">
-          <button class="filter-tab active" data-platform="all" role="tab" aria-selected="true">All Platforms</button>
+          <button class="filter-tab active" data-platform="all" role="tab" aria-selected="true">All Channels</button>
           <button class="filter-tab" data-platform="youtube" role="tab" aria-selected="false">YouTube</button>
           <button class="filter-tab" data-platform="podcast" role="tab" aria-selected="false">Podcast</button>
           <button class="filter-tab" data-platform="newsletter" role="tab" aria-selected="false">Newsletter</button>
-          <button class="filter-tab" data-platform="speaking" role="tab" aria-selected="false">Speaking</button>
+          <button class="filter-tab" data-platform="speaking" role="tab" aria-selected="false">Keynote Speaking</button>
         </div>
       </div>
-
-      <!-- Metrics Grid with Staggered Card Reveals -->
-      <div class="metrics-grid reveal-stagger-container" id="metrics-grid">
-
-        <!-- Metric Card 1: YouTube -->
-        <div class="metric-card card-terracotta reveal-card-item" data-platforms="all,youtube">
-          <div class="card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M23.5 6.2c-.3-1.1-1.1-2-2.2-2.3C19.3 3.3 12 3.3 12 3.3s-7.3 0-9.3.6C1.6 4.2.8 5.1.5 6.2.1 8.2.1 12.3.1 12.3s0 4.1.4 6.1c.3 1.1 1.1 2 2.2 2.3 2 .6 9.3.6 9.3.6s7.3 0 9.3-.6c1.1-.3 1.9-1.2 2.2-2.3.4-2 .4-6.1.4-6.1s0-4.1-.4-6.1zM9.5 15.5V9l6 3.3-6 3.2z" />
+      
+      <div class="bento-grid" id="bento-grid">
+        <!-- Bento Card 1: YouTube -->
+        <div class="bento-card col-span-2" data-platforms="youtube">
+          <div class="bento-card-header">
+            <span class="bento-card-badge youtube">YouTube</span>
+            <svg class="bento-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.5 6.2c-.3-1.1-1.1-2-2.2-2.3C19.3 3.3 12 3.3 12 3.3s-7.3 0-9.3.6C1.6 4.2.8 5.1.5 6.2.1 8.2.1 12.3.1 12.3s0 4.1.4 6.1c.3 1.1 1.1 2 2.2 2.3 2 .6 9.3.6 9.3.6s7.3 0 9.3-.6c1.1-.3 1.9-1.2 2.2-2.3.4-2 .4-6.1.4-6.1s0-4.1-.4-6.1zM9.5 15.5V9l6 3.3-6 3.2z" />
             </svg>
           </div>
-          <span class="platform-label">YouTube Subscribers</span>
-          <h3 class="metric-value" data-target="224500">224,500</h3>
-          <p class="metric-trend">+8.4% monthly growth</p>
-          <div class="card-footer-info">
-            <span>Primary Audience: Age 24-34 (48%)</span>
+          <div class="bento-card-body">
+            <h3 class="bento-main-stat">224.5K</h3>
+            <p class="bento-stat-label">Subscribers &bull; +8.4% monthly</p>
+            <p class="bento-desc">Focused on creative systems, productivity routines, and lifestyle design for knowledge workers.</p>
+          </div>
+          <div class="bento-card-footer">
+            <span>12.8% average CTR &mdash; Industry average: 4.5%</span>
           </div>
         </div>
-
-        <!-- Metric Card 2: YouTube CTR -->
-        <div class="metric-card card-peach reveal-card-item" data-platforms="all,youtube">
-          <div class="card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </div>
-          <span class="platform-label">YouTube Engagement</span>
-          <h3 class="metric-value">12.8%</h3>
-          <p class="metric-trend">Average View Duration: 9:15m</p>
-          <div class="card-footer-info">
-            <span>Industry Benchmark: 4.5%</span>
-          </div>
-        </div>
-
-        <!-- Metric Card 3: Podcast listeners -->
-        <div class="metric-card card-cream reveal-card-item" data-platforms="all,podcast">
-          <div class="card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
-              <path d="M19 10v1a7 7 0 0 1-14 0v-1M12 19v3M8 22h8" />
-            </svg>
-          </div>
-          <span class="platform-label">Podcast Monthly Downloads</span>
-          <h3 class="metric-value" data-target="75000">75,000+</h3>
-          <p class="metric-trend">Top 15 Apple Self-Improvement</p>
-          <div class="card-footer-info">
-            <span>Weekly episodes with transcripts</span>
-          </div>
-        </div>
-
-        <!-- Metric Card 4: Newsletter open rate -->
-        <div class="metric-card card-mint reveal-card-item" data-platforms="all,newsletter">
-          <div class="card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
+        
+        <!-- Bento Card 2: Substack -->
+        <div class="bento-card" data-platforms="newsletter">
+          <div class="bento-card-header">
+            <span class="bento-card-badge newsletter">Substack</span>
+            <svg class="bento-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect width="20" height="16" x="2" y="4" rx="2" />
               <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
             </svg>
           </div>
-          <span class="platform-label">Newsletter Subscribers</span>
-          <h3 class="metric-value" data-target="54300">54,300</h3>
-          <p class="metric-trend">46.2% Open Rate (Avg)</p>
-          <div class="card-footer-info">
-            <span>Click-Through Rate: 8.9%</span>
+          <div class="bento-card-body">
+            <h3 class="bento-main-stat">54.3K</h3>
+            <p class="bento-stat-label">Active Readers</p>
+            <div class="open-rate-bar-container">
+              <div class="open-rate-label">46.2% Open Rate</div>
+              <div class="open-rate-progress-bg">
+                <div class="open-rate-progress-fill" style="width: 46.2%;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="bento-card-footer">
+            <span>8.9% Average Click-Through Rate</span>
           </div>
         </div>
-
-        <!-- Metric Card 5: Speaking Keynotes -->
-        <div class="metric-card card-sand reveal-card-item" data-platforms="all,speaking">
-          <div class="card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
+        
+        <!-- Bento Card 3: Demographics (spans 1 col, 2 rows) -->
+        <div class="bento-card row-span-2" data-platforms="youtube,newsletter,podcast">
+          <div class="bento-card-header">
+            <span class="bento-card-badge demo">Audience Profile</span>
+            <svg class="bento-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a5 5 0 1 0 0 10 5 5 0 1 0 0-10zM12 14c-4 0-8 2-8 6h16c0-4-4-6-8-6z" />
+            </svg>
+          </div>
+          <div class="bento-card-body">
+            <h4 class="bento-subheading">Core Niche</h4>
+            <p class="bento-text-small">Knowledge workers, tech professionals, designers, and creative founders.</p>
+            
+            <div class="demographics-chart">
+              <div class="chart-row">
+                <div class="chart-row-label">Age 24-34</div>
+                <div class="chart-row-percentage">48%</div>
+                <div class="chart-bar-container"><div class="chart-bar-fill terracotta" style="width: 48%;"></div></div>
+              </div>
+              <div class="chart-row">
+                <div class="chart-row-label">Age 18-24</div>
+                <div class="chart-row-percentage">32%</div>
+                <div class="chart-bar-container"><div class="chart-bar-fill mustard" style="width: 32%;"></div></div>
+              </div>
+              <div class="chart-row">
+                <div class="chart-row-label">Age 35-44</div>
+                <div class="chart-row-percentage">15%</div>
+                <div class="chart-bar-container"><div class="chart-bar-fill mint" style="width: 15%;"></div></div>
+              </div>
+            </div>
+            
+            <div class="geo-tags">
+              <span class="geo-tag">🇺🇸 US (42%)</span>
+              <span class="geo-tag">🇬🇧 UK (18%)</span>
+              <span class="geo-tag">🇪🇺 EU (15%)</span>
+              <span class="geo-tag">🇨🇦 CA (9%)</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Bento Card 4: Podcast -->
+        <div class="bento-card" data-platforms="podcast">
+          <div class="bento-card-header">
+            <span class="bento-card-badge podcast">Podcast</span>
+            <svg class="bento-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+              <path d="M19 10v1a7 7 0 0 1-14 0v-1M12 19v3M8 22h8" />
+            </svg>
+          </div>
+          <div class="bento-card-body">
+            <h3 class="bento-main-stat">75K+</h3>
+            <p class="bento-stat-label">Monthly Downloads</p>
+            <p class="bento-desc">Ranked in Apple Self-Improvement top 15 charts. 92% listener retention.</p>
+          </div>
+        </div>
+        
+        <!-- Bento Card 5: Reach (spans 2 cols, 1 row) -->
+        <div class="bento-card col-span-2" data-platforms="youtube,podcast,newsletter,speaking">
+          <div class="bento-card-header">
+            <span class="bento-card-badge reach">Total Brand Footprint</span>
+            <span class="pulse-indicator"></span>
+          </div>
+          <div class="bento-card-body bento-body-horizontal">
+            <div class="reach-main">
+              <h3 class="bento-main-stat">360K+</h3>
+              <p class="bento-stat-label">Multi-Channel Active Followers</p>
+            </div>
+            <div class="reach-sparkline">
+              <svg viewBox="0 0 200 60" width="100%" height="60" fill="none" stroke="var(--color-terracotta)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M 0 50 C 20 45, 40 55, 60 35 C 80 15, 100 40, 120 20 C 140 0, 160 30, 180 10 C 190 0, 200 5, 210 2" />
+                <path d="M 0 50 C 20 45, 40 55, 60 35 C 80 15, 100 40, 120 20 C 140 0, 160 30, 180 10 C 190 0, 200 5, 210 2 L 200 60 L 0 60 Z" fill="rgba(211, 97, 53, 0.05)" stroke="none" />
+              </svg>
+            </div>
+          </div>
+          <div class="bento-card-footer">
+            <span>94% Organic acquisition rate. No paid media run to date.</span>
+          </div>
+        </div>
+        
+        <!-- Bento Card 6: Speaking -->
+        <div class="bento-card" data-platforms="speaking">
+          <div class="bento-card-header">
+            <span class="bento-card-badge speaking">Keynotes</span>
+            <svg class="bento-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M2 10h20M2 14h20M6 6h12M6 18h12" />
             </svg>
           </div>
-          <span class="platform-label">Speaking Events</span>
-          <h3 class="metric-value">15+ / Yr</h3>
-          <p class="metric-trend">Keynotes at Tech & Creative conferences</p>
-          <div class="card-footer-info">
-            <span>Average audience: 1,200+ attendees</span>
+          <div class="bento-card-body">
+            <h3 class="bento-main-stat">15+</h3>
+            <p class="bento-stat-label">Events / Year</p>
+            <p class="bento-desc">Speaking at Figma Config, Creative Mornings, and Tech conferences.</p>
+          </div>
+          <div class="bento-card-footer">
+            <span>Avg. audience size: 1,200+ attendees</span>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Metric Card 6: Cumulative Reach -->
-        <div class="metric-card card-white reveal-card-item" data-platforms="all,youtube,podcast,newsletter,speaking">
-          <div class="card-icon animate-pulse">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-              <circle cx="9" cy="7" r="4" />
-              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+  <!-- Sticky Storytelling & Timeline Section -->
+  <section class="journey-section" id="journey">
+    <div class="container journey-container">
+      
+      <!-- Left Column: Sticky Image Frame -->
+      <div class="journey-visual-wrapper">
+        <div class="journey-sticky-frame">
+          <div class="journey-image-container active" id="journey-img-1">
+            <img src="./assets/journey-1.png" alt="Medical school days">
+            <div class="journey-img-tag">2018 &mdash; The Hospital Ward</div>
+          </div>
+          <div class="journey-image-container" id="journey-img-2">
+            <img src="./assets/journey-2.png" alt="Building creator studio">
+            <div class="journey-img-tag">2020 &mdash; The Pivot</div>
+          </div>
+          <div class="journey-image-container" id="journey-img-3">
+            <img src="./assets/journey-3.png" alt="Published Author & Speaker">
+            <div class="journey-img-tag">2023-2026 &mdash; Creative Legacy</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Column: Scrolling Timeline Stories -->
+      <div class="journey-narrative-wrapper">
+        <span class="section-label">My Narrative</span>
+        <h2 class="section-title-serif">From Medical Doctor to Creative Catalyst</h2>
+        
+        <div class="timeline-trail">
+          <!-- Timeline Step 1 -->
+          <div class="timeline-step active" data-step="1">
+            <div class="timeline-marker"></div>
+            <div class="timeline-year">2018</div>
+            <h3 class="timeline-step-title">The Traditional Path</h3>
+            <p class="timeline-step-desc">
+              As a clinical medicine student and doctor, my world was defined by wards, shifts, and diagnostics. While fulfilling, I felt a deep calling toward a creative life. I began writing online, sharing lessons on mental clarity and cognitive efficiency under high-stress hospital conditions.
+            </p>
+          </div>
+          
+          <!-- Timeline Step 2 -->
+          <div class="timeline-step" data-step="2">
+            <div class="timeline-marker"></div>
+            <div class="timeline-year">2020</div>
+            <h3 class="timeline-step-title">The Clean Break</h3>
+            <p class="timeline-step-desc">
+              I made the terrifying choice to leave medicine. With no guarantee of success, I launched my YouTube channel and digital newsletter. By treating creative work with the same rigorous diagnostic methodology I learned in medicine, my audience scaled to 100K in under a year.
+            </p>
+          </div>
+          
+          <!-- Timeline Step 3 -->
+          <div class="timeline-step" data-step="3">
+            <div class="timeline-marker"></div>
+            <div class="timeline-year">2023-2026</div>
+            <h3 class="timeline-step-title">Bestselling Author & Speaker</h3>
+            <p class="timeline-step-desc">
+              I published the bestselling journal <em>Find Your Focus</em> and built a multi-channel media engine. I now partner with premier brands that respect user focus. We deliver storytelling that respects our readers' intellect and drives massive, authentic conversions.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Deliverables Section (Premium Feature Showcase) -->
+  <section class="deliverables-section" id="showcase">
+    <div class="container">
+      <div class="section-header reveal-fade">
+        <span class="section-label">Integration Models</span>
+        <h2 class="section-title">How We Collaborate</h2>
+        <p class="section-subtitle">Premium editorial content channels customized for high-growth tech and lifestyle platforms.</p>
+      </div>
+      
+      <div class="deliverables-grid">
+        <!-- YouTube Integration -->
+        <div class="deliverable-card reveal-fade">
+          <div class="deliv-card-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="15" x="2" y="3" rx="2" />
+              <path d="M10 15v-6l5 3-5 3z" />
             </svg>
           </div>
-          <span class="platform-label">Total Multi-Channel Reach</span>
-          <h3 class="metric-value" data-target="360000">360K+</h3>
-          <p class="metric-trend">94% Organic Acquisition</p>
-          <div class="card-footer-info">
-            <span>Highly engaged creator niche</span>
-          </div>
+          <h3>Dedicated & Integrated Video</h3>
+          <p>A full review or deep integration showing how your product fits into a professional, productive day-to-day workflow. No generic ad-reads, just real-world context.</p>
+          <ul class="deliv-specs">
+            <li>&bull; 2-3 minute integrated segment</li>
+            <li>&bull; Lifetime SEO & link placement</li>
+            <li>&bull; Custom community post syndicate</li>
+          </ul>
         </div>
 
+        <!-- Newsletter Feature -->
+        <div class="deliverable-card reveal-fade">
+          <div class="deliv-card-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <path d="m22 6-10 7L2 6" />
+            </svg>
+          </div>
+          <h3>Substack Newsletter Feature</h3>
+          <p>Top-tier, editorial-style features in our weekly letter. We compose customized copy that reviews your tool's efficacy, leading to industry-topping CTRs.</p>
+          <ul class="deliv-specs">
+            <li>&bull; Solo sponsor placement (No noise)</li>
+            <li>&bull; 54,000+ active inbox reach</li>
+            <li>&bull; Permanent archive web-link SEO</li>
+          </ul>
+        </div>
+
+        <!-- Podcast Sponsorship -->
+        <div class="deliverable-card reveal-fade">
+          <div class="deliv-card-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+              <path d="M19 10v1a7 7 0 0 1-14 0v-1M12 19v3M8 22h8" />
+            </svg>
+          </div>
+          <h3>Mid-Roll Podcast Read</h3>
+          <p>An organic, conversational 60-second read during our self-improvement podcast. Aria shares her direct user experience, building immediate trust.</p>
+          <ul class="deliv-specs">
+            <li>&bull; 60-second conversational spot</li>
+            <li>&bull; Show notes & newsletter writeup</li>
+            <li>&bull; Multi-episode discounts</li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Card Stacking Section (Packages) -->
+  <section class="stacking-section" id="packages">
+    <div class="container">
+      <div class="stacking-header reveal-fade">
+        <span class="section-label">Collaboration Packages</span>
+        <h2 class="section-title">Designed for Scale</h2>
+        <p class="section-subtitle">Select the integration package that matches your campaign goals. Each tier provides complete multi-channel support.</p>
+      </div>
+      
+      <div class="stacking-container">
+        <!-- Stacking Card 1 -->
+        <div class="stacking-card card-1" id="stack-card-1">
+          <div class="stack-card-header">
+            <div class="tier-name">Tier 01 // The Spotlight</div>
+            <div class="tier-price">$2,200</div>
+          </div>
+          <div class="stack-card-body">
+            <h3>Focused Channel Entry</h3>
+            <p>Ideal for launching new software tools or brand campaigns needing a high-trust spike in qualified leads.</p>
+            <div class="tier-features">
+              <div class="feature-item">&rarr; 1x Mid-Roll Podcast Ad Read</div>
+              <div class="feature-item">&rarr; 1x Top-Sponsor Newsletter Feature</div>
+              <div class="feature-item">&rarr; Cross-promotion links on X/Twitter</div>
+            </div>
+            <div class="tier-reach-estimate">Est. Campaign Reach: <strong>129,000 Impressions</strong></div>
+          </div>
+        </div>
+        
+        <!-- Stacking Card 2 -->
+        <div class="stacking-card card-2" id="stack-card-2">
+          <div class="stack-card-header">
+            <div class="tier-name">Tier 02 // The Ecosystem</div>
+            <div class="tier-price">$3,900</div>
+          </div>
+          <div class="stack-card-body">
+            <h3>Multi-Touchpoint Integration</h3>
+            <p>Our most popular package. Places your brand in front of our audience across all channels over a two-week period.</p>
+            <div class="tier-features">
+              <div class="feature-item">&rarr; 1x Integrated YouTube Video Segment</div>
+              <div class="feature-item">&rarr; 1x Mid-Roll Podcast Ad Read</div>
+              <div class="feature-item">&rarr; 1x Dedicated Substack Newsletter Slot</div>
+            </div>
+            <div class="tier-reach-estimate">Est. Campaign Reach: <strong>353,000 Impressions</strong></div>
+          </div>
+        </div>
+        
+        <!-- Stacking Card 3 -->
+        <div class="stacking-card card-3" id="stack-card-3">
+          <div class="stack-card-header">
+            <div class="tier-name">Tier 03 // The Brand Legacy</div>
+            <div class="tier-price">$5,800</div>
+          </div>
+          <div class="stack-card-body">
+            <h3>Full Channel Takeover</h3>
+            <p>Maximum brand immersion. Includes deep custom deliverables like a fully dedicated YouTube video, co-designed workspace resources, and multi-week syndication.</p>
+            <div class="tier-features">
+              <div class="feature-item">&rarr; 1x Fully Dedicated YouTube Review Video</div>
+              <div class="feature-item">&rarr; 2x Substack Newsletter Sponsorships</div>
+              <div class="feature-item">&rarr; 2x Mid-Roll Podcast Conversational Reads</div>
+              <div class="feature-item">&rarr; Custom templates shared in bio links</div>
+            </div>
+            <div class="tier-reach-estimate">Est. Campaign Reach: <strong>650,000+ Impressions</strong></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -299,8 +519,7 @@
         <h2 class="section-title reveal-text-container">
           <span class="reveal-text-line"><span>High-Impact Integrations</span></span>
         </h2>
-        <p class="section-subtitle">Case studies of creative partnerships that generated tangible conversions and brand
-          awareness.</p>
+        <p class="section-subtitle">Case studies of creative partnerships that generated tangible conversions and brand awareness.</p>
       </div>
 
       <div class="case-study-item">
@@ -327,9 +546,7 @@
           <div class="case-study-badge">Co-Marketing Campaign</div>
           <h3 class="case-study-title">How we drove 14,800+ sign-ups for Notion's New Calendar App</h3>
           <p class="case-study-description">
-            Instead of a standard 60-second ad slot, we created a fully integrated, multi-channel narrative around "Time
-            Blocking in Lighter Calendars". This campaign spanned a dedicated YouTube video, an in-depth review in the
-            newsletter, and custom templates shared with the community.
+            Instead of a standard 60-second ad slot, we created a fully integrated, multi-channel narrative around "Time Blocking in Lighter Calendars". This campaign spanned a dedicated YouTube video, an in-depth review in the newsletter, and custom templates shared with the community.
           </p>
 
           <div class="case-study-metrics">
@@ -348,9 +565,7 @@
           </div>
 
           <blockquote class="case-study-quote">
-            <p>"Aria's campaign felt completely organic. Her audience trusted the recommendation because she showed how
-              she actually integrates it into her life. It's the highest converting partnership we've run this year."
-            </p>
+            <p>"Aria's campaign felt completely organic. Her audience trusted the recommendation because she showed how she actually integrates it into her life. It's the highest converting partnership we've run this year."</p>
             <cite>— Sarah Jenkins, Lead Brand Marketing at Notion</cite>
           </blockquote>
         </div>
@@ -358,15 +573,101 @@
     </div>
   </section>
 
-  <!-- Interactive Package Calculator -->
+  <!-- Masonry Visual Archive Section -->
+  <section class="masonry-section" id="gallery">
+    <div class="container">
+      <div class="section-header reveal-fade">
+        <span class="section-label">Visual Archive</span>
+        <h2 class="section-title-serif">The Creative Canvas</h2>
+        <p class="section-subtitle" style="color: rgba(250, 246, 240, 0.65);">A glance into our lifestyle aesthetic, workspace designs, journal publications, and podcast moments.</p>
+      </div>
+      
+      <div class="masonry-grid-layout">
+        <!-- Item 1 -->
+        <div class="masonry-item reveal-fade">
+          <img src="./assets/archive-1.png" alt="Aesthetic workspace photo">
+          <div class="masonry-caption">Creative Workspace &mdash; 01</div>
+        </div>
+        <!-- Item 2 -->
+        <div class="masonry-item reveal-fade">
+          <img src="./assets/archive-2.png" alt="Abstract shape canvas">
+          <div class="masonry-caption">Design Patterns &mdash; 02</div>
+        </div>
+        <!-- Item 3 (Editorial Quote Block) -->
+        <div class="masonry-item reveal-fade text-only-masonry">
+          <div class="masonry-text-card">
+            <span class="text-card-tag">Core Value</span>
+            <blockquote>"The goal is not to fill every second with productivity, but to make sure the seconds you fill are filled with meaning."</blockquote>
+            <cite>&mdash; Aria Vance</cite>
+          </div>
+        </div>
+        <!-- Item 4 -->
+        <div class="masonry-item reveal-fade">
+          <img src="./assets/archive-3.png" alt="Find your focus typo poster">
+          <div class="masonry-caption">Editorial Typography &mdash; 03</div>
+        </div>
+        <!-- Item 5 -->
+        <div class="masonry-item reveal-fade">
+          <img src="./assets/archive-4.png" alt="Podcast covers artwork">
+          <div class="masonry-caption">Digital Studio &mdash; 04</div>
+        </div>
+        <!-- Item 6 -->
+        <div class="masonry-item reveal-fade">
+          <img src="./assets/archive-5.png" alt="Journal book cover mockup">
+          <div class="masonry-caption">Print Production &mdash; 05</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kind Words Section (Magazine Testimonials Layout) -->
+  <section class="kind-words-section" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal-fade">
+        <span class="section-label">Endorsements</span>
+        <h2 class="section-title">Kind Words from Partners</h2>
+      </div>
+      
+      <div class="magazine-quotes-layout">
+        <!-- Big Highlight Quote (Left/Top) -->
+        <div class="quote-card-lg reveal-fade">
+          <div class="magazine-quote-large">
+            &ldquo;Aria's campaign was single-handedly responsible for driving 3,000+ key trials of our app in a single week. Her readers are highly engaged, and her copywriting matches our tone of voice perfectly. Highly recommend.&rdquo;
+          </div>
+          <div class="magazine-author">
+            <strong>Lisa Chen</strong>
+            <span>Influencer Lead at Audible</span>
+          </div>
+        </div>
+
+        <!-- Small Quote 1 (Right Top) -->
+        <div class="quote-card-sm reveal-fade">
+          <p>&ldquo;Working with Aria was incredibly seamless. She holds her content to a very high standard, which makes brand integrations feel completely natural. Our CTR was double what we normally see.&rdquo;</p>
+          <div class="magazine-author">
+            <strong>Marcus Aurelius</strong>
+            <span>VP of Growth at Skillshare</span>
+          </div>
+        </div>
+
+        <!-- Small Quote 2 (Right Bottom) -->
+        <div class="quote-card-sm reveal-fade">
+          <p>&ldquo;Aria brought fresh, creative ideas to our keynotes, making complex topics accessible. She had the largest audience of the day and her engagement numbers showed just how much her community values her ideas.&rdquo;</p>
+          <div class="magazine-author">
+            <strong>James Carter</strong>
+            <span>Producer at Creative Futures</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Budget Planner Calculator Section -->
   <section class="calculator-section" id="calculator">
     <div class="container">
       <div class="section-header reveal-fade">
-        <h2 class="section-title reveal-text-container">
-          <span class="reveal-text-line"><span>Design Your Campaign</span></span>
-        </h2>
-        <p class="section-subtitle">Select the deliverables that align with your marketing objectives to estimate your
-          campaign budget.</p>
+        <span class="section-label">Campaign Planner</span>
+        <h2 class="section-title">Design Your Campaign</h2>
+        <p class="section-subtitle">Select the deliverables that align with your marketing objectives to estimate your campaign budget.</p>
       </div>
 
       <div class="calculator-grid">
@@ -380,20 +681,19 @@
             </div>
             <label for="deliv-youtube" class="item-details">
               <span class="item-title">Dedicated YouTube Video Integration</span>
-              <span class="item-desc">A deep dive review or integration within a major weekly video + description
-                link.</span>
+              <span class="item-desc">A deep dive review or integration within a major weekly video + description link.</span>
             </label>
             <div class="item-price-tag">$2,500</div>
           </div>
 
-          <div class="deliverable-item" data-price="1200" data-reach="54000" data-name="Newsletter Newsletter Feature">
+          <div class="deliverable-item" data-price="1200" data-reach="54000" data-name="Newsletter Feature">
             <div class="item-checkbox-wrapper">
               <input type="checkbox" id="deliv-newsletter" class="deliverable-checkbox">
               <span class="custom-checkbox"></span>
             </div>
             <label for="deliv-newsletter" class="item-details">
-              <span class="item-title">Newsletter Newsletter Feature</span>
-              <span class="item-desc">Top-section editorial sponsor slot in our weekly newsletter + custom links.</span>
+              <span class="item-title">Substack Newsletter Feature</span>
+              <span class="item-desc">Top-section sponsor slot in our weekly newsletter + custom links.</span>
             </label>
             <div class="item-price-tag">$1,200</div>
           </div>
@@ -430,8 +730,7 @@
           </div>
 
           <div class="summary-items-list" id="summary-items">
-            <p class="empty-state-text">No deliverables selected yet. Click options on the left to start building your
-              proposal.</p>
+            <p class="empty-state-text">No deliverables selected yet. Click options on the left to start building your proposal.</p>
           </div>
 
           <div class="summary-divider"></div>
@@ -447,112 +746,19 @@
             </div>
           </div>
 
-          <!-- Handwritten style discount badge -->
+          <!-- Discount badge -->
           <div class="bundle-badge" id="bundle-badge" style="display: none;">
-            <svg class="badge-bg" width="100%" height="100%" viewBox="0 0 160 40" preserveAspectRatio="none"
-              fill="none">
+            <svg class="badge-bg" width="100%" height="100%" viewBox="0 0 160 40" preserveAspectRatio="none" fill="none">
               <path d="M5 20C20 8 140 3 155 20C140 32 20 38 5 20Z" fill="var(--color-mint)" opacity="0.6" />
             </svg>
             <span class="badge-text">Multi-channel Bundle Discount Applied! (10%)</span>
           </div>
 
-          <button id="btn-apply-pkg" class="btn btn-primary btn-full btn-pill btn-magnetic" disabled>Secure This
-            Package</button>
+          <button id="btn-apply-pkg" class="btn btn-primary btn-full btn-pill btn-magnetic" disabled>Secure This Package</button>
 
           <p class="summary-footer-text">
-            *Final pricing depends on exclusivity periods and timeline. Clicking above pre-fills the partnership request
-            form below.
+            *Final pricing depends on exclusivity periods and timeline. Clicking above pre-fills the partnership request form below.
           </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Kind Words Section (Testimonials Carousel) -->
-  <section class="testimonials-section" id="testimonials">
-    <div class="container">
-      <div class="section-header reveal-fade">
-        <h2 class="section-title reveal-text-container">
-          <span class="reveal-text-line"><span>Kind Words from Brand Partners</span></span>
-        </h2>
-        <p class="section-subtitle">What marketing leaders say about our editorial integration process and conversion
-          numbers.</p>
-      </div>
-
-      <div class="testimonial-carousel-wrapper reveal-fade">
-        <div class="testimonial-carousel" id="testimonial-carousel">
-
-          <!-- Slide 1 -->
-          <div class="testimonial-slide active">
-            <div class="testimonial-quote-icon">“</div>
-            <p class="testimonial-text">
-              Working with Aria was incredibly seamless. She holds her content to a very high standard, which makes
-              brand integrations feel completely natural to the audience. Our CTR was double what we normally see from
-              creator campaigns.
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar-placeholder" style="background-color: var(--color-terracotta);">M</div>
-              <div class="author-details">
-                <strong class="author-name">Marcus Aurelius</strong>
-                <span class="author-title">VP of Growth at Skillshare</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 2 -->
-          <div class="testimonial-slide">
-            <div class="testimonial-quote-icon">“</div>
-            <p class="testimonial-text">
-              Aria's newsletter feature was single-handedly responsible for driving 3,000 key trials of our app in a
-              single week. Her readers are highly engaged, and her copywriting matches our tone of voice perfectly.
-              Highly recommend.
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar-placeholder" style="background-color: var(--color-mint);">L</div>
-              <div class="author-details">
-                <strong class="author-name">Lisa Chen</strong>
-                <span class="author-title">Influencer Lead at Audible</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="testimonial-slide">
-            <div class="testimonial-quote-icon">“</div>
-            <p class="testimonial-text">
-              Aria brought fresh, creative ideas to our keynotes, making complex topics accessible and exciting. She had
-              the largest audience of the day and her engagement numbers showed just how much her community values her
-              ideas.
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar-placeholder" style="background-color: var(--color-mustard);">J</div>
-              <div class="author-details">
-                <strong class="author-name">James Carter</strong>
-                <span class="author-title">Executive Producer of Creative Futures</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="carousel-controls">
-          <button class="carousel-btn btn-prev" aria-label="Previous Testimonial">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M19 12H5M12 19l-7-7 7-7" />
-            </svg>
-          </button>
-          <div class="carousel-dots" id="carousel-dots">
-            <button class="carousel-dot active" data-slide="0" aria-label="Go to slide 1"></button>
-            <button class="carousel-dot" data-slide="1" aria-label="Go to slide 2"></button>
-            <button class="carousel-dot" data-slide="2" aria-label="Go to slide 3"></button>
-          </div>
-          <button class="carousel-btn btn-next" aria-label="Next Testimonial">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </button>
         </div>
       </div>
     </div>
@@ -563,11 +769,10 @@
     <div class="container contact-container">
       <div class="contact-header reveal-fade">
         <h2 class="contact-title reveal-text-container">
-          <span class="reveal-text-line"><span>Let's build a partnership.</span></span>
+          <span>Let's build a partnership.</span>
         </h2>
         <p class="contact-subtitle">
-          Ready to pitch or want to discuss a custom integration? Fill out the proposal form and I'll get back to you
-          within 2 business days.
+          Ready to pitch or want to discuss a custom integration? Fill out the proposal form and I'll get back to you within 2 business days.
         </p>
 
         <div class="contact-quick-info">
@@ -620,8 +825,7 @@
               placeholder="Tell me about your product, campaign timelines, and key objectives..." required></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary btn-pill btn-full btn-magnetic">Submit Partnership
-            Request</button>
+          <button type="submit" class="btn btn-primary btn-pill btn-full btn-magnetic">Submit Partnership Request</button>
 
           <div class="form-feedback" id="form-feedback" style="display: none;">
             <div class="feedback-success">
@@ -641,17 +845,17 @@
     <div class="container footer-container">
       <div class="footer-left">
         <a href="#" class="logo footer-logo">aria<span>vance</span></a>
-        <p class="footer-bio">Creating premium editorial content for modern professionals. Designed for creators,
-          thinkers, and builders.</p>
+        <p class="footer-bio">Creating premium editorial content for modern professionals. Designed for creators, thinkers, and builders.</p>
       </div>
 
       <div class="footer-right">
         <div class="footer-col">
           <strong class="footer-col-title">Navigation</strong>
-          <a href="#about" class="footer-link">About</a>
-          <a href="#metrics" class="footer-link">Metrics</a>
-          <a href="#case-studies" class="footer-link">Case Studies</a>
-          <a href="#calculator" class="footer-link">Packages</a>
+          <a href="#journey" class="footer-link">Journey</a>
+          <a href="#dashboard" class="footer-link">Dashboard</a>
+          <a href="#showcase" class="footer-link">Showcase</a>
+          <a href="#packages" class="footer-link">Packages</a>
+          <a href="#gallery" class="footer-link">Archive</a>
         </div>
 
         <div class="footer-col">
